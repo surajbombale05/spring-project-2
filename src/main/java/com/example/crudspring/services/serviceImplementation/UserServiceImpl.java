@@ -35,6 +35,7 @@ public class UserServiceImpl implements UserServices{
         Optional<User> existingUserOptional = userRepo.findById(id);
         if (existingUserOptional.isPresent()) {
             User existingUser = existingUserOptional.get();
+            
           if (user.getName() != null) {
             existingUser.setName(user.getName());
           }
